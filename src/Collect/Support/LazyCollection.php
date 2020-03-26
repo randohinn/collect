@@ -31,7 +31,7 @@ class LazyCollection implements Enumerable
         if ($source instanceof Closure || $source instanceof self) {
             $this->source = $source;
         } elseif (is_null($source)) {
-            $this->source = static::empty();
+            $this->source = new static([]);
         } else {
             $this->source = $this->getArrayableItems($source);
         }
