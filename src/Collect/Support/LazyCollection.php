@@ -1,5 +1,4 @@
 <?php
-
 namespace Tightenco\Collect\Support;
 
 use ArrayIterator;
@@ -608,8 +607,9 @@ class LazyCollection implements Enumerable
     public function pluck($value, $key = null)
     {
         return new static(function () use ($value, $key) {
-            $value, $key = $this->explodePluckParameters($value, $key);
-
+            $ret = $this->explodePluckParameters($value, $key);
+            $value=$ret['value'];
+            $key = $ret['key'];
             foreach ($this as $item) {
                 $itemValue = data_get($item, $value);
 
