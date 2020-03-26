@@ -42,10 +42,10 @@ class LazyCollection implements Enumerable
      *
      * @return static
      */
-    public static function empty()
+   /* public static function empty()
     {
         return new static([]);
-    }
+    }*/
 
     /**
      * Create a new instance by invoking the callback a given amount of times.
