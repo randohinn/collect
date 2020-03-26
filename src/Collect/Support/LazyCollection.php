@@ -407,9 +407,9 @@ class LazyCollection implements Enumerable
                 if (! is_array($item) && ! $item instanceof Enumerable) {
                     yield $item;
                 } elseif ($depth === 1) {
-                    yield from $item;
+                    //yield from $item;
                 } else {
-                    yield from (new static($item))->flatten($depth - 1);
+                    //yield from (new static($item))->flatten($depth - 1);
                 }
             }
         });
