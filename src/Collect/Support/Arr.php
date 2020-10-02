@@ -294,7 +294,12 @@ class Arr
         }
 
         if (strpos($key, '.') === false) {
-            return isset($array[$key]) ? $array[$key] : value($default);
+            if(isset($array[$key]) {
+                return $array[$key];
+            } else {
+                return value($default);
+            }
+               
         }
 
         foreach (explode('.', $key) as $segment) {
