@@ -294,7 +294,7 @@ class Arr
         }
 
         if (strpos($key, '.') === false) {
-            if(isset($array[$key]) {
+            if(isset($array[$key])) {
                 return $array[$key];
             } else {
                 return value($default);
